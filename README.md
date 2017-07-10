@@ -26,4 +26,4 @@ A ‘class’ would be something like ‘3rd period 6th grade math’ or ‘5th 
 # Instructions
 Fork this repository in GitHub, clone the repository to your local system, create a Django project with accompanying apps using a currently supported version of Django (1.7 – 1.11). Using the Django admin application and 3rd party packages is acceptable and encouraged. Also, along with writing unit tests, following PEP-8 and PEP-257, using PyLint and ReSTful URL design.
 
-There is a lot of work here, we don’t expect you to complete the project. Where would you start? Show us what you got?
+There is a lot of work here, we don’t expect you to complete the project. After getting the basic Django project and app structure created, take 2 – 3 hours and see what you can get done. Where would you start? How would you go about tackling this project? Show us what you got?
