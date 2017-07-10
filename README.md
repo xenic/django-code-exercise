@@ -20,11 +20,11 @@ The student attendance application will be used in high school and middle school
 * allow the administration to add/enroll a student in a class
 * allow the teacher for a class to mark a student absent, tardy or present for their class on a given day
 
-A ‘class’ would be something like ‘3rd period 6th grade math’ or ‘5th period 7th grade art’. The administration can be a single privileged user or interface, and don’t worry about login’s or authentication authorization for this application. 
+Examples of a ‘class’ are ‘3rd period 6th grade math’ or ‘5th period 7th grade art’. The administration can be a single privileged user or interface. The ‘users’ of the application will be the teachers but don’t worry about login or authentication authorization for this application. 
 
 
 # Instructions
-Fork this repository in GitHub, clone the repository to your local system, create a Django project with accompanying apps using a currently supported version of Django (1.7 – 1.11). Using the Django admin application and 3rd party packages is acceptable and encouraged. Also, along with writing unit tests, following PEP-8 and PEP-257, using PyLint and ReSTful URL design.
+Fork this repository in GitHub, clone the repository to your local system, create a Django project with accompanying apps using a currently supported version of Django (1.7 – 1.11). Using the Django admin application and 3rd party packages is acceptable and encouraged. Also, using unit tests, following PEP-8 and PEP-257, using PyLint and ReSTful URL design is encouraged.
 
 As for the data store layer the default SQLite database is preferred, and using the Django template engine is also preferred. In addition, concentrate on the server side implementation verses the client side development. Simple HTML templates and forms are expected.
 
