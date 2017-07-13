@@ -4,17 +4,24 @@
   <head>
     <meta charset="utf-8">
     <title>GK Attendance</title>
+    <link rel="stylesheet" href="{% static 'gk_attendance/css/main.css' %}" type="text/css">
   </head>
   <body>
-    <span id="studentAttendanceByClass">view student attendance by class</span><br>
-    <span id="studentAttendanceByGrade">view student attendance by grade</span><br>
-    <span id="studentAttendance">view student attendance for the entire school</span><br>
-    <span id="studentAttendanceByStudent">view a specific student’s attendance</span><br>
-    <span id="markAttendance">mark attendance<span><br>
-    <span id="createClass">create class</span><br>
-    <span id="createStudent">create student</span><br>
-    <span id="createTeacher">create teacher</span><br>
-    <span id="addStudentToClass">add student to class</span><br>
+    <ul>
+
+
+      <li id="studentAttendanceByClass">view student attendance by class</li>
+      <li id="studentAttendanceByGrade">view student attendance by grade</li>
+      <li id="studentAttendance">view student attendance for the entire school</li>
+      <li id="studentAttendanceByStudent">view a specific student’s attendance</li>
+      <li id="markAttendance">mark attendance</li>
+      <li id="administration">Administration</li>
+      <li id="adminCreateStudent">create student</li>
+      <li id="adminCreateTeacher">create teacher</li>
+      <li id="adminCreateClass">create class</li>
+      <li id="adminAddStudentToClass">add student to class</li>
+    </ul>
+    <div id="additionalData"></div>
     <div id="content"></div>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="{% static 'gk_attendance/js/main.js' %}"></script>

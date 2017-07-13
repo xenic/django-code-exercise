@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from rest_framework import viewsets
+from rest_framework.response import Response
 from .models import Teacher, Student, SchoolClass, Attendance
 from .serializers import TeacherSerializer, StudentSerializer, SchoolClassSerializer, AttendanceSerializer
 # Create your views here.
@@ -24,9 +25,19 @@ class SchoolClassViewSet(viewsets.ModelViewSet):
 
 
 class AttendanceViewSet(viewsets.ModelViewSet):
-    """ endpoint for Attendance """
+    """ endpoint for SchoolClass """
     queryset = Attendance.objects.all()
     serializer_class = AttendanceSerializer
+
+
+class AttendanceListViewSet(viewsets.ModelViewSet):
+    """ endpoint for Attendance """
+    queryset = Attendance.objects.all()#
+    serializer_class = AttendanceSerializer
+    def retrieve(self, request, school_class_id=None):
+        queryset = Attendance.objects.all().filter(school_class_id=school_class_id)
+        serializer = AttendanceSerializer(queryset, many=True)
+        return Response(serializer.data)
 
 
 def student_attendance_by_class(request):
@@ -39,6 +50,7 @@ def student_attendance_by_grade(request):
 
 def student_attendance(request):
     pass
+
 
 def index(request):
     return render(request, 'gk_attendance/index.html', {})

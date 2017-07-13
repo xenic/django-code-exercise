@@ -27,6 +27,7 @@ router.register(r'school_class', views.SchoolClassViewSet)
 #for this project, no need to split out urls by app for now.
 urlpatterns = [
     url(r'^$', views.index, name='index'),
-    url(r'^', include(router.urls)),
+    url(r'^api/', include(router.urls)),
+    url('^attendanceList/(?P<school_class_id>.+)/$', views.AttendanceListViewSet.as_view({'get': 'retrieve'})),
     url(r'^admin/', admin.site.urls),
 ]
