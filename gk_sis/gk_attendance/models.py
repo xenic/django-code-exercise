@@ -1,7 +1,6 @@
 from django.db import models
 
 
-# Create your models here.
 class Student(models.Model):
     first_name = models.CharField(max_length=100)
     middle_name = models.CharField(max_length=100)
@@ -21,6 +20,12 @@ class SchoolClass(models.Model):
     teachers = models.ManyToManyField(Teacher)
 
 
+class AttendanceStatus(models.Model):
+    name = models.CharField(max_length=50)
+
+
 class Attendance(models.Model):
+    date = models.DateField()
     student = models.ForeignKey(Student, on_delete=models.CASCADE)
     school_class = models.ForeignKey(SchoolClass, on_delete=models.CASCADE)
+    status = models.ForeignKey(AttendanceStatus)
