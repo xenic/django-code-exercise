@@ -40,6 +40,16 @@ class AttendanceListViewSet(viewsets.ModelViewSet):
         return Response(serializer.data)
 
 
+class StudentListViewSet(viewsets.ModelViewSet):
+    """ endpoint for Attendance """
+    queryset = Student.objects.all()#
+    serializer_class = StudentSerializer
+    def retrieve(self, request, school_class_id=None):
+        queryset = Student.objects.all().filter(schoolclass=school_class_id)
+        serializer = StudentSerializer(queryset, many=True)
+        return Response(serializer.data)
+
+
 def student_attendance_by_class(request):
     pass
 

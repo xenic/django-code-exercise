@@ -1,4 +1,15 @@
-﻿# django-code-exercise
+﻿# Design Notes
+Need Student, Teacher, Class, and Attendance tables.  Classes will act as the map between teachers and students.
+Would be nice to have a few additional support tables like Status, and Grade
+Student m2m Class
+Teacher m2m Class
+Attendance has FK to Student, Class, and Status, and a date field.
+Build ReST api endpoints for each model, though in phase 1, just use the built in Django Admin for creating students, teachers and classes.
+Build additional views/endpoints/filters for all viewing needs (students by class, students by grade, all students attendance, etc)
+Build a UI for displaying these.  For phase 1, a single page api endpoint with javascript navigation to hit endpoints and display results
+
+
+# django-code-exercise
 A code exercise for assessing Django skills.
 
 # Introduction

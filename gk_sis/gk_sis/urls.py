@@ -29,5 +29,6 @@ urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^api/', include(router.urls)),
     url('^attendanceList/(?P<school_class_id>.+)/$', views.AttendanceListViewSet.as_view({'get': 'retrieve'})),
+    url('^studentListByClass/(?P<school_class_id>.+)/$', views.StudentListViewSet.as_view({'get': 'retrieve'})),
     url(r'^admin/', admin.site.urls),
 ]
