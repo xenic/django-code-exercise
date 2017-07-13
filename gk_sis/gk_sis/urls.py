@@ -24,8 +24,9 @@ router.register(r'student', views.StudentViewSet)
 router.register(r'attendance', views.AttendanceViewSet)
 router.register(r'school_class', views.SchoolClassViewSet)
 
-
+#for this project, no need to split out urls by app for now.
 urlpatterns = [
+    url(r'^$', views.index, name='index'),
     url(r'^', include(router.urls)),
     url(r'^admin/', admin.site.urls),
 ]

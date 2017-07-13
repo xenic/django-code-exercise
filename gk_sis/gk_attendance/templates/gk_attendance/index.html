@@ -1,0 +1,22 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>GK Attendance</title>
+  </head>
+  <body>
+    <span id="studentAttendanceByClass">view student attendance by class</span><br>
+    <span id="studentAttendanceByGrade">view student attendance by grade</span><br>
+    <span id="studentAttendance">view student attendance for the entire school</span><br>
+    <span id="studentAttendanceByStudent">view a specific student’s attendance</span><br>
+    <span id="markAttendance">mark attendance<span><br>
+    <span id="createClass">create class</span><br>
+    <span id="createStudent">create student</span><br>
+    <span id="createTeacher">create teacher</span><br>
+    <span id="addStudentToClass">add student to class</span><br>
+    <div id="content"></div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="{% static 'gk_attendance/js/main.js' %}"></script>
+  </body>
+</html>
